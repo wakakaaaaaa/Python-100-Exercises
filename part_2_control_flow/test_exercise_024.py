@@ -1,5 +1,9 @@
-from part_2_control_flow.exercise_024 import sum_1_to_100
+import pytest
+from part_2_control_flow.exercise_024 import factorial
 
-def test_sum_1_to_100():
-    """测试从 1 加到 100 的总和"""
-    assert sum_1_to_100() == 5050 
+def test_factorial():
+    assert factorial(5) == 120
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(3) == 6
+    assert factorial(10) == 3628800

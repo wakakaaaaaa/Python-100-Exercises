@@ -1,21 +1,15 @@
 """
-### 40. 反转字符串
+题目 040: 查找列表中的第二大数
 
-- **描述:** 不使用切片 `[::-1]`，编写代码反转一个字符串。
-- **提示:** 遍历原字符串，将每个字符从前面加到新字符串中。
-- **期待:** 对于字符串 `"python"`，输出 `nohtyp`。
+要求:
+编写一个名为 `find_second_largest` 的函数，它接受一个数字列表 `numbers` 作为参数，
+并返回其中第二大的数字。如果列表元素少于2个，或者所有元素都相同，可以返回 `None`。
+
+提示:
+一个直接的方法是先对列表去重并排序，然后取倒数第二个元素。
+注意处理列表长度不足的边界情况。
 """
 
-def reverse_string(s):
-    """
-    不使用切片 [::-1]，反转一个字符串。
-    :param s: 输入字符串
-    :return: 反转后的字符串
-    """
+def find_second_largest(numbers):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    text = "python"
-    reversed_text = reverse_string(text)
-    print(f"'{text}' 反转后是 '{reversed_text}'") 

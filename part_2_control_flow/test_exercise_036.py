@@ -1,28 +1,27 @@
-from part_2_control_flow.exercise_036 import simple_calculator
+import pytest
+from part_2_control_flow.exercise_036 import robust_read_file
+from io import StringIO
+import sys
 
-def test_addition():
-    """测试加法"""
-    assert simple_calculator(10, '+', 5) == 15
+@pytest.fixture
+def captured_output():
+    new_out, new_err = StringIO(), StringIO()
+    old_out, old_err = sys.stdout, sys.stderr
+    try:
+        sys.stdout, sys.stderr = new_out, new_err
+        yield sys.stdout, sys.stderr
+    finally:
+        sys.stdout, sys.stderr = old_out, old_err
 
-def test_subtraction():
-    """测试减法"""
-    assert simple_calculator(10, '-', 5) == 5
+def test_robust_read_file_exists(tmp_path, captured_output):
+    p = tmp_path / "test.txt"
+    p.write_text("Hello")
+    
+    content = robust_read_file(str(p))
+    assert content == "Hello"
+    assert "File operation finished." in captured_output[0].getvalue()
 
-def test_multiplication():
-    """测试乘法"""
-    assert simple_calculator(10, '*', 5) == 50
-
-def test_division():
-    """测试除法"""
-    assert simple_calculator(10, '/', 5) == 2.0
-
-def test_division_by_zero():
-    """测试除以零的情况"""
-    assert simple_calculator(10, '/', 0) == "错误：除数不能为零！"
-
-def test_invalid_operator():
-    """测试无效运算符"""
-    # 根据函数的实现，这里可能返回一个错误消息字符串
-    expected_message = "无效的运算符"
-    assert simple_calculator(10, '%', 5) == expected_message
-    assert simple_calculator(10, 'a', 5) == expected_message 
+def test_robust_read_file_not_exists(captured_output):
+    content = robust_read_file("non_existent_file.txt")
+    assert content is None
+    assert "File operation finished." in captured_output[0].getvalue()

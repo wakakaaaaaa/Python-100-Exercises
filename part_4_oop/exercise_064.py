@@ -1,24 +1,19 @@
 """
-### 64. 方法重写
+题目 064: 创建数据库会话依赖项
 
-- **描述:** 在 `Car` 类中有一个 `fuel_type` 方法返回 "Diesel/Petrol"。在 `ElectricCar` 类中重写这个方法，让它返回 "Electric"。
-- **提示:** 在子类中定义一个和父类同名的方法即可。
-- **期待:**
-  - `my_car.fuel_type()` 返回 "Diesel/Petrol"。
-  - `my_tesla.fuel_type()` 返回 "Electric"。
+要求:
+修改 `main.py`。
+创建一个名为 `get_db` 的依赖项函数。
+这个函数应该:
+1. 从 `database.SessionLocal` 创建一个数据库会话。
+2. 使用 `yield` 将会话提供给路径操作函数。
+3. 在 `finally` 块中确保会话被关闭。
+
+提示:
+`def get_db():`
+`    db = SessionLocal()`
+`    try:`
+`        yield db`
+`    finally:`
+`        db.close()`
 """
-
-class Car:
-    # 在这里写下你的代码
-    pass
-
-class ElectricCar(Car):
-    # 在这里写下你的代码
-    pass
-
-if __name__ == '__main__':
-    my_car = Car("Toyota", "Camry")
-    print(f"My {my_car.brand} car uses {my_car.fuel_type()} fuel.")
-    
-    my_tesla = ElectricCar("Tesla", "Model 3", "75kWh")
-    print(f"My {my_tesla.brand} car uses {my_tesla.fuel_type()} fuel.") 

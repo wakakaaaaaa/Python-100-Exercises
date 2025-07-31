@@ -1,21 +1,26 @@
 """
-### 35. 统计字符串中的元音字母
+题目 035: 在取款时检查余额
 
-- **描述:** 统计一个给定字符串中元音字母（a, e, i, o, u）的总数。
-- **提示:** 遍历字符串中的每个字符，判断它是否在元音字母集合 `"aeiou"` 中。不区分大小写。
-- **期待:** 对于字符串 `"Hello Python"`，输出 `元音字母数量: 3`。
+要求:
+升级 `BankAccount` 类。修改 `withdraw` 方法，
+使其在尝试取出超过当前余额的金额时，引发一个 `ValueError` 异常，
+并附带错误消息 `"Insufficient funds"`。
+
+提示:
+使用 `if` 语句检查取款金额是否大于余额。
+如果是，使用 `raise ValueError("...")` 来引发异常。
 """
 
-def count_vowels(s):
-    """
-    统计字符串中的元音字母数量（不区分大小写）
-    :param s: 输入字符串
-    :return: 元音字母的总数
-    """
-    # 在这里写下你的代码
-    pass
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
 
-if __name__ == '__main__':
-    text = "Hello Python"
-    vowel_count = count_vowels(text)
-    print(f"字符串 '{text}' 中的元音字母数量: {vowel_count}") 
+    def get_balance(self):
+        return self.balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    # 在这里修改你的代码
+    def withdraw(self, amount):
+        self.balance -= amount

@@ -1,22 +1,20 @@
 """
-### 31. 字典推导式
+题目 031: 类的定义与继承
 
-- **描述:** 给定一个列表 `["name", "age", "city"]`，使用字典推导式创建一个字典，其中键是列表中的字符串，值是字符串的长度。
-- **提示:** 语法为 `{key_expression: value_expression for item in iterable}`。
-- **期待:** `print(result_dict)` 输出 `{'name': 4, 'age': 3, 'city': 4}`。
+要求:
+1. 创建一个名为 `Shape` 的基类，它有一个 `area()` 方法，该方法直接 `return 0`。
+2. 创建一个名为 `Rectangle` 的子类，继承自 `Shape`。
+3. `Rectangle` 的 `__init__` 方法应接受 `width` 和 `height`。
+4. 重写 `area()` 方法，使其能正确计算并返回矩形的面积。
+
+提示:
+子类通过在类定义时括号内放入父类名来实现继承，例如 `class Child(Parent):`。
 """
 
-def create_dict_from_list(keys):
-    """
-    使用字典推导式从列表创建字典
-    :param keys: 字符串列表
-    :return: 一个字典，键是列表中的字符串，值是其长度
-    """
+class Shape:
+    def area(self):
+        return 0
+
+class Rectangle(Shape):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    key_list = ["name", "age", "city"]
-    my_dict = create_dict_from_list(key_list)
-    print(f"从列表 {key_list} 创建的字典是:")
-    print(my_dict) 

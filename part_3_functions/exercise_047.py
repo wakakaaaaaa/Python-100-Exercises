@@ -1,44 +1,15 @@
 """
-### 47. 作用域 (局部变量和全局变量)
+题目 047: 将字符串转换为日期对象
 
-- **描述:** 定义一个全局变量 `x = 10`。编写一个函数，尝试在函数内部修改 `x` 的值。先不使用 `global` 关键字，再使用 `global` 关键字，观察区别。
-- **提示:** 直接在函数内赋值会创建一个新的局部变量。使用 `global x` 来声明你要修改的是全局变量 `x`。
-- **期待:**
-  - 不使用 `global`，函数执行后全局 `x` 仍然是 `10`。
-  - 使用 `global`，函数执行后全局 `x` 的值被改变。
+要求:
+编写一个名为 `parse_date` 的函数，它接受一个 `"YYYY-MM-DD"` 格式的字符串，
+并返回一个对应的 `datetime.date` 对象。
+
+提示:
+`from datetime import datetime`，然后使用 `datetime.strptime(date_string, '%Y-%m-%d').date()`。
 """
+from datetime import datetime
 
-# 定义全局变量
-x = 10
-
-def attempt_to_modify_x_without_global():
-    """
-    这个函数尝试修改全局变量 x，但没有使用 global 关键字。
-    实际上，它创建了一个新的同名局部变量 x，这个变量会遮蔽全局变量。
-    """
+def parse_date(date_string):
     # 在这里写下你的代码
     pass
-
-def modify_x_with_global():
-    """
-    这个函数使用 global 关键字来声明它将要修改的是全局变量 x。
-    """
-    # 在这里写下你的代码
-    pass
-
-
-# 主程序入口，用于直接运行时进行演示
-if __name__ == '__main__':
-    # --- 场景1: 不使用 global 关键字 ---
-    # 1. 打印调用函数前，全局 x 的值。
-    # 2. 调用 attempt_to_modify_x_without_global()
-    # 3. 打印调用函数后，全局 x 的值，观察它是否改变。
-    print("--- 场景1: 不使用 global 关键字 ---")
-
-
-    # --- 场景2: 使用 global 关键字 ---
-    # 1. 将全局 x 的值重置为 10
-    # 2. 打印调用函数前，全局 x 的值。
-    # 3. 调用 modify_x_with_global()
-    # 4. 打印调用函数后，全局 x 的值，观察它是否改变。
-    print("\n--- 场景2: 使用 global 关键字 ---")

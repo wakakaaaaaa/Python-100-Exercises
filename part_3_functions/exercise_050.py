@@ -1,23 +1,16 @@
 """
-### 50. `map()` 函数
+题目 050: 使用正则表达式查找所有数字
 
-- **描述:** 给定一个列表 `numbers = [1, 2, 3, 4, 5]`，使用 `map()` 和一个 `lambda` 函数，生成一个新列表，其中每个元素都是原列表中对应元素的平方。
-- **提示:** `map(function, iterable)`。记得将 `map` 对象转换为列表 `list(map(...))`。
-- **期待:** 得到新列表 `[1, 4, 9, 16, 25]`。
+要求:
+编写一个名为 `find_all_numbers` 的函数，它接受一个字符串 `s`。
+函数应使用 `re` 模块返回一个包含字符串中所有数字（作为字符串）的列表。
+
+提示:
+`import re`。一个可以匹配整数的简单正则表达式是 `r'\d+'`。
+使用 `re.findall()` 来找到所有匹配项。
 """
+import re
 
-def square_list_with_map(numbers):
-    """
-    使用 map 和 lambda 函数计算列表中每个数字的平方。
-    :param numbers: 一个数字列表
-    :return: 一个包含原列表中每个数字平方的新列表
-    """
+def find_all_numbers(s):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    original_numbers = [1, 2, 3, 4, 5]
-    # 调用 square_list_with_map 并打印结果
-    squared = square_list_with_map(original_numbers)
-    print(f"原列表: {original_numbers}")
-    print(f"平方后的列表: {squared}") 

@@ -1,7 +1,7 @@
-from part_1_basics.exercise_004 import concatenate_strings
+import pytest
+from part_1_basics.exercise_004 import rectangle_area
 
-def test_concatenate_strings():
-    """测试字符串拼接功能"""
-    assert concatenate_strings("Hello", "Python") == "Hello Python"
-    assert concatenate_strings("First", "Part") == "First Part"
-    assert concatenate_strings("", "") == " " 
+def test_rectangle_area():
+    assert rectangle_area(3, 4) == 12
+    assert rectangle_area(5, 5) == 25
+    assert rectangle_area(1, 100) == 100

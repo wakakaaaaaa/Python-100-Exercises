@@ -1,25 +1,17 @@
-from part_3_functions.exercise_045 import sum_all
+import pytest
+import requests
+from part_3_functions.exercise_045 import create_post
 
-def test_multiple_arguments():
-    """测试多个参数"""
-    assert sum_all(1, 2, 3, 4, 5) == 15
+def test_create_post(mocker):
+    mock_response = mocker.Mock()
+    mock_response.json.return_value = {"id": 101, "title": "New Post", "body": "This is a post."}
+    mocker.patch("requests.post", return_value=mock_response)
 
-def test_two_arguments():
-    """测试两个参数"""
-    assert sum_all(10, 20) == 30
-    
-def test_negative_numbers():
-    """测试负数参数"""
-    assert sum_all(-1, -2, -3) == -6
+    post_data = {"title": "New Post", "body": "This is a post."}
+    response_data = create_post(post_data["title"], post_data["body"])
 
-def test_mixed_numbers():
-    """测试混合正负数参数"""
-    assert sum_all(1, -2, 3, -4) == -2
-
-def test_no_arguments():
-    """测试没有参数"""
-    assert sum_all() == 0
-    
-def test_one_argument():
-    """测试单个参数"""
-    assert sum_all(100) == 100 
+    requests.post.assert_called_once_with(
+        "https://api.example.com/posts", 
+        json=post_data
+    )
+    assert response_data["id"] == 101

@@ -1,21 +1,13 @@
 """
-### 13. 列表创建与访问
+题目 013: 检查字典中是否存在某个键
 
-- **描述:** 创建一个包含数字 1 到 5 的列表，并访问并打印列表的第三个元素。
-- **提示:** 列表用方括号 `[]` 创建。列表索引从 0 开始，所以第三个元素的索引是 2。
-- **期待:** `print(element)` 输出 `3`。
+要求:
+编写一个名为 `key_exists` 的函数，它接受一个字典 `d` 和一个键 `key` 作为参数。如果键存在于字典中，则返回 `True`，否则返回 `False`。
+
+提示:
+你可以使用 `in` 关键字来检查一个键是否存在于字典中。
 """
 
-def get_third_element(lst):
-    """
-    返回列表的第三个元素
-    :param lst: 输入列表
-    :return: 列表的第三个元素
-    """
+def key_exists(d, key):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    my_list = [1, 2, 3, 4, 5]
-    third_element = get_third_element(my_list)
-    print(f"列表 {my_list} 的第三个元素是: {third_element}") 

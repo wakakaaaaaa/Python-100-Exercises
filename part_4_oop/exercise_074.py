@@ -1,28 +1,14 @@
 """
-### 74. 多重继承
+题目 074: 创建用户与待办事项的关联
 
-- **描述:** 创建一个 `Flyable` 类（有 `fly` 方法）和一个 `Swimmable` 类（有 `swim` 方法）。然后创建一个 `Duck` 类，它同时继承这两个类。
-- **提示:** `class Duck(Flyable, Swimmable):`
-- **期待:** `duck = Duck()`，`duck.fly()` 和 `duck.swim()` 都能被成功调用。
+要求:
+1. 修改 `models.py` 中的 `Todo` 模型。
+2. 添加一个 `owner_id` 列，它是指向 `users.id` 的外键。
+3. 使用 `sqlalchemy.orm.relationship` 创建一个 `owner` 属性，将 `Todo` 链接到其 `User`。
+4. 在 `User` 模型中，也添加一个 `todos` 关系，反向链接到该用户的所有 `Todo` 项。
+
+提示:
+`owner_id = Column(Integer, ForeignKey("users.id"))`
+`owner = relationship("User", back_populates="todos")`
+In User model: `todos = relationship("Todo", back_populates="owner")`
 """
-
-class Flyable:
-    """一个代表能飞的Mixin类。"""
-    # 在这里写下你的代码
-    pass
-
-class Swimmable:
-    """一个代表能游泳的Mixin类。"""
-    # 在这里写下你的代码
-    pass
-
-
-if __name__ == '__main__':
-    # 当你定义好 Duck 类后，下面的代码应该可以正常运行
-    donald = Duck()
-    
-    print("Donald the Duck's abilities:")
-    donald.fly()
-    donald.swim()
-    # 如果你添加了 quack 方法，也可以在这里调用
-    # donald.quack() 

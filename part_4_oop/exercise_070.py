@@ -1,21 +1,12 @@
 """
-### 70. 特殊方法 (魔术方法) `__str__`
+题目 070: 分离Pydantic Schemas
 
-- **描述:** 在第 61 题的 `Dog` 类中实现 `__str__` 方法，使得 `print(my_dog)` 时能输出一条可读性好的描述信息。
-- **提示:** `def __str__(self): return f"{self.name} is a {self.age}-year-old dog."`
-- **期待:** `my_dog = Dog("Fido", 5)`，`print(my_dog)` 输出 `Fido is a 5-year-old dog.`。
+要求:
+1. 创建新文件 `part_4_oop/schemas.py`。
+2. 将所有 Pydantic 模型（用于API请求和响应的类）从 `main.py` 移动到 `schemas.py`。
+3. 更新 `main.py`，从 `schemas.py` 导入这些模型。
+
+提示:
+通常会有一个用于读取的 `Todo` schema，一个用于创建的 `TodoCreate` schema。
+这有助于将API的数据形态与数据库的表结构解耦。
 """
-
-class Dog:
-    # 在这里写下你的代码
-    pass
-
-if __name__ == '__main__':
-    my_dog = Dog("Fido", 5)
-    
-    # 当 print() 函数作用于一个对象时，它会调用该对象的 __str__ 方法
-    print(my_dog)
-    
-    # str() 函数也会调用 __str__ 方法
-    dog_description = str(my_dog)
-    print(f"The description is: '{dog_description}'") 

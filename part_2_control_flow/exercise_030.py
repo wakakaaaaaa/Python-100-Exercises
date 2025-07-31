@@ -1,20 +1,15 @@
 """
-### 30. 列表推导式
+题目 030: 获取字典的所有键
 
-- **描述:** 使用列表推导式，生成一个包含 1 到 10 的平方的列表。
-- **提示:** 语法为 `[expression for item in iterable]`。
-- **期待:** `print(squares)` 输出 `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]`。
+要求:
+编写一个名为 `get_keys` 的函数，它接受一个字典 `d` 作为参数，
+并返回一个包含该字典所有键的列表。
+
+提示:
+字典对象有一个 `.keys()` 方法，但它返回的是一个特殊的 `dict_keys` 对象。
+你需要用 `list()` 函数将其转换为真正的列表。
 """
 
-def generate_squares():
-    """
-    使用列表推导式生成 1 到 10 的平方列表
-    :return: 包含平方数的列表
-    """
+def get_keys(d):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    square_list = generate_squares()
-    print("1 到 10 的平方列表:")
-    print(square_list) 

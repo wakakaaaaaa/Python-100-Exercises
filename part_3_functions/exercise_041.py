@@ -1,22 +1,16 @@
 """
-### 41. 编写一个简单的问候函数
+题目 041: 发送你的第一个GET请求
 
-- **描述:** 编写一个名为 `greet` 的函数，它接受一个参数 `name`，并打印出 "Hello, [name]!"。
-- **提示:** 使用 `def` 关键字定义函数 `def greet(name):`。
-- **期待:** 调用 `greet("Alice")` 会输出 `Hello, Alice!`。
+要求:
+编写一个名为 `get_json_from_url` 的函数，它接受一个 `url` 字符串作为参数。
+函数应使用 `requests` 库向该URL发送一个GET请求，并返回响应的JSON内容（通常是一个字典）。
+
+提示:
+你需要先在你的虚拟环境中安装 `requests` 库 (`uv pip install requests`)。
+然后使用 `requests.get(url).json()` 来获取结果。
 """
+import requests
 
-def greet(name):
-    """
-    生成一个问候字符串。
-    为了方便测试，函数将返回字符串而不是直接打印。
-    :param name: 要问候的人的名字
-    :return: 问候语字符串
-    """
+def get_json_from_url(url):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    user_name = "Alice"
-    greeting = greet(user_name)
-    print(greeting) 

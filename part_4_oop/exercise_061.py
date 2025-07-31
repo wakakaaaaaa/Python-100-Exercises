@@ -1,24 +1,16 @@
 """
-### 61. 创建一个简单的 `Dog` 类
+题目 061: 安装SQLAlchemy并设置数据库
 
-- **描述:** 创建一个名为 `Dog` 的类。在 `__init__` 方法中，为它设置 `name` 和 `age` 两个属性。
-- **提示:** `class Dog:`，`def __init__(self, name, age): self.name = name`。
-- **期待:** `my_dog = Dog("Fido", 5)` 创建一个实例，`my_dog.name` 是 `"Fido"`。
+要求:
+1. 安装 SQLAlchemy: `uv pip install sqlalchemy`
+2. 创建新文件 `part_4_oop/database.py`。
+3. 在 `database.py` 中，配置 SQLAlchemy engine 连接到名为 `todos.db` 的SQLite数据库。
+4. 同时，在 `database.py` 中创建 `SessionLocal` (一个 session 工厂) 和 `Base` (一个声明式基类)。
+
+提示:
+`from sqlalchemy import create_engine`
+`from sqlalchemy.ext.declarative import declarative_base`
+`from sqlalchemy.orm import sessionmaker`
+`SQLALCHEMY_DATABASE_URL = "sqlite:///./todos.db"`
+`engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})`
 """
-
-class Dog:
-    """
-    一个简单的 Dog 类，用于表示一只狗。
-    """
-    # 在这里写下你的代码
-    pass
-
-if __name__ == '__main__':
-    # 你可以在这里创建 Dog 实例并测试你的代码
-    my_dog = Dog("Fido", 5)
-    print(f"我的狗叫 {my_dog.name}，它 {my_dog.age} 岁了。")
-    
-    # 验证属性是否正确设置
-    assert my_dog.name == "Fido"
-    assert my_dog.age == 5
-    print("Dog 实例创建成功，属性已验证！") 

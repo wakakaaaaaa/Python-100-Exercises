@@ -1,19 +1,14 @@
-from part_2_control_flow.exercise_031 import create_dict_from_list
+import pytest
+from part_2_control_flow.exercise_031 import Shape, Rectangle
 
-def test_create_dict_from_list_basic():
-    """测试基本列表的转换"""
-    keys = ["name", "age", "city"]
-    expected = {'name': 4, 'age': 3, 'city': 4}
-    assert create_dict_from_list(keys) == expected
+def test_inheritance():
+    rect = Rectangle(10, 5)
+    assert isinstance(rect, Shape)
 
-def test_create_dict_from_list_another():
-    """测试另一个列表的转换"""
-    keys2 = ["python", "is", "fun"]
-    expected2 = {'python': 6, 'is': 2, 'fun': 3}
-    assert create_dict_from_list(keys2) == expected2
+def test_rectangle_area():
+    rect = Rectangle(width=10, height=5)
+    assert rect.area() == 50
 
-def test_create_dict_from_list_empty():
-    """测试空列表的转换"""
-    keys3 = []
-    expected3 = {}
-    assert create_dict_from_list(keys3) == expected3 
+def test_shape_area():
+    shape = Shape()
+    assert shape.area() == 0

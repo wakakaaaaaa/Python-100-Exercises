@@ -1,6 +1,12 @@
-from part_2_control_flow.exercise_030 import generate_squares
+import pytest
+from part_2_control_flow.exercise_030 import get_keys
 
-def test_generate_squares():
-    """测试生成 1 到 10 的平方数列表"""
-    expected = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-    assert generate_squares() == expected 
+def test_get_keys():
+    d1 = {"a": 1, "b": 2, "c": 3}
+    # We sort the keys to have a predictable order for testing
+    assert sorted(get_keys(d1)) == ["a", "b", "c"]
+
+    d2 = {"name": "Alice", "age": 30}
+    assert sorted(get_keys(d2)) == ["age", "name"]
+
+    assert get_keys({}) == []

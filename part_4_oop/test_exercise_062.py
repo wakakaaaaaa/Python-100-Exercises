@@ -1,11 +1,18 @@
 import pytest
-from part_4_oop.exercise_062 import Dog
+from sqlalchemy import Column, Integer, String, Boolean
 
-@pytest.fixture
-def my_dog():
-    """提供一个标准的 Dog 实例作为测试数据"""
-    return Dog("Fido", 5)
+def test_todo_model_definition():
+    try:
+        from part_4_oop.models import Todo
+        from part_4_oop.database import Base
 
-def test_bark_return_value(my_dog):
-    """测试 bark 方法的返回值。"""
-    assert my_dog.bark() == "Woof! Woof!" 
+        assert issubclass(Todo, Base)
+        assert Todo.__tablename__ == "todos"
+        assert isinstance(Todo.id.property.columns[0].type, Integer)
+        assert Todo.id.property.columns[0].primary_key
+        assert isinstance(Todo.title.property.columns[0].type, String)
+        assert isinstance(Todo.completed.property.columns[0].type, Boolean)
+    except ImportError as e:
+        pytest.fail(f"Failed to import Todo model: {e}")
+    except Exception as e:
+        pytest.fail(f"An error occurred during model definition test: {e}")

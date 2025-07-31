@@ -1,22 +1,13 @@
 """
-### 19. 集合基础
+题目 019: 从两个列表创建字典
 
-- **描述:** 给定一个包含重复元素的列表 `numbers = [1, 2, 3, 2, 4, 5, 4, 1]`，使用集合来移除重复的元素。
-- **提示:** 使用 `set()` 函数可以将列表转换为集合，集合会自动去重。
-- **期待:** `print(unique_numbers)` 输出 `{1, 2, 3, 4, 5}`。
+要求:
+编写一个名为 `create_dictionary` 的函数，它接受两个列表 `keys` 和 `values` 作为参数。函数应返回一个字典，其中 `keys` 列表中的每个元素作为键，`values` 列表中的对应元素作为值。
+
+提示:
+你可以使用 `zip()` 函数将两个列表配对，然后用 `dict()` 函数将配对结果转换为字典。
 """
 
-def remove_duplicates(numbers):
-    """
-    使用集合移除列表中的重复元素
-    :param numbers: 包含重复元素的列表
-    :return: 一个移除了重复元素的集合
-    """
+def create_dictionary(keys, values):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    num_list = [1, 2, 3, 2, 4, 5, 4, 1]
-    unique_set = remove_duplicates(num_list)
-    print(f"原始列表: {num_list}")
-    print(f"去重后的集合: {unique_set}") 

@@ -1,35 +1,16 @@
 """
-### 36. 简单的计算器
+题目 036: 健壮的文件读取函数
 
-- **描述:** 编写一个程序，接收用户输入的两个数字和一个运算符（+,-,*,/），然后执行相应的计算。
-- **提示:** 使用 `if-elif-else` 来判断用户选择了哪个运算符。注意处理除数为零的情况。
-- **期待:** 用户输入 `10`, `*`, `5`，程序输出 `结果: 50`。
+要求:
+编写一个名为 `robust_read_file` 的函数，它接受一个文件路径 `filepath`。
+1. 使用 `try...except` 块来处理 `FileNotFoundError`。如果文件不存在，函数应返回 `None`。
+2. 如果文件存在，函数应读取并返回其内容。
+3. 使用 `finally` 块来确保无论文件是否存在，都会打印一条消息 `"File operation finished."`。
+
+提示:
+这是将错误处理与文件操作结合的绝佳实践。
 """
 
-def simple_calculator(num1, operator, num2):
-    """
-    一个简单的计算器函数
-    :param num1: 第一个数字
-    :param operator: 运算符 (+, -, *, /)
-    :param num2: 第二个数字
-    :return: 计算结果。如果除以零，返回一个错误信息字符串。
-    """
+def robust_read_file(filepath):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    # 交互式部分
-    try:
-        n1 = float(input("请输入第一个数字: "))
-        op = input("请输入运算符 (+, -, *, /): ")
-        n2 = float(input("请输入第二个数字: "))
-        
-        result = simple_calculator(n1, op, n2)
-        print(f"结果: {result}")
-
-    except ValueError:
-        print("输入无效，请输入数字。")
-
-# 注意:
-# 为了方便测试，我们将核心判断逻辑放在 simple_calculator 函数中。
-# __main__ 部分则用于实际的交互演示。 

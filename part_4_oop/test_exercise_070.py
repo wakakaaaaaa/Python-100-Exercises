@@ -1,17 +1,16 @@
-from part_4_oop.exercise_070 import Dog
+import pytest
 
-def test_str_output():
-    """测试 __str__ 方法的输出是否符合预期格式。"""
-    fido = Dog("Fido", 5)
-    assert str(fido) == "Fido is a 5-year-old dog."
-    
-def test_print_output():
-    """测试 print() 函数是否使用了 __str__ 方法。"""
-    # 这个测试间接验证了 print 的行为，因为 print(obj) 内部会调用 str(obj)
-    buddy = Dog("Buddy", 2)
-    assert str(buddy) == "Buddy is a 2-year-old dog."
+def test_schemas_file_structure():
+    try:
+        from part_4_oop.schemas import Todo, TodoCreate
+        from pydantic import BaseModel
 
-def test_different_dog():
-    """测试不同实例的 __str__ 输出。"""
-    lucy = Dog("Lucy", 10)
-    assert str(lucy) == "Lucy is a 10-year-old dog." 
+        assert issubclass(Todo, BaseModel)
+        assert issubclass(TodoCreate, BaseModel)
+        assert 'id' in Todo.model_fields
+        assert 'id' not in TodoCreate.model_fields
+
+    except ImportError:
+        pytest.fail("Could not import schemas from schemas.py")
+    except Exception as e:
+        pytest.fail(f"Schema definition test failed: {e}")

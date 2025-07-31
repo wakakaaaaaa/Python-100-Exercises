@@ -1,23 +1,15 @@
 """
-### 65. `super()` 函数
+题目 065: 重构“创建待办事项”以使用数据库
 
-- **描述:** 修改第 63 题中 `ElectricCar` 的 `__init__` 方法，使用 `super()` 来调用父类 `Car` 的 `__init__` 方法。
-- **提示:** `super().__init__(brand, model)`。
-- **期待:** 功能与第 63 题相同，但代码更规范、更易于维护。
+要求:
+修改 `POST /todos` 端点。
+1. 添加 `db: Session = Depends(get_db)` 到函数签名。
+2. 移除对旧的内存 `db` 列表的操作。
+3. 使用 SQLAlchemy session (`db`) 来创建新的 `Todo` 记录并存入数据库。
+
+提示:
+`db_todo = models.Todo(...)`
+`db.add(db_todo)`
+`db.commit()`
+`db.refresh(db_todo)`
 """
-
-class Car:
-    # 在这里写下你的代码
-    pass
-
-class ElectricCar(Car):
-    # 在这里写下你的代码
-    pass
-
-if __name__ == '__main__':
-    my_nio = ElectricCar("NIO", "ET7", "150kWh")
-    
-    # 验证属性是否被正确设置
-    print(f"Brand: {my_nio.brand}")
-    print(f"Model: {my_nio.model}")
-    print(f"Battery Size: {my_nio.battery_size}") 

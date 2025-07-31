@@ -1,0 +1,43 @@
+name: 意见反馈和建议
+description: 报告问题、提出建议或反馈任何意见。
+title: "[反馈/建议] "
+labels: ["反馈", "建议"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        非常感谢你的反馈，这能帮助我们把这个项目做得更好！
+
+  - type: checkboxes
+    id: feedback-type
+    attributes:
+      label: 反馈类型
+      description: 你要报告什么类型的问题？
+      options:
+        - label: 题目问题 (例如：题目描述不清、测试用例有误)
+        - label: 功能建议 (例如：希望增加新的题目类型或功能)
+        - label: 错别字或文档问题
+        - label: 其他
+    validations:
+      required: true
+
+  - type: input
+    id: related-exercise
+    attributes:
+      label: 相关题目编号 (可选)
+      description: 如果你的反馈与某道具体的题目有关，请填写它的编号 (例如, 042)。
+      placeholder: "例如: 042"
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: 详细描述
+      description: 请详细描述你遇到的问题或你的建议。如果可能，请提供截图或代码片段。
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: 建议的解决方案 (可选)
+      description: 如果你有关于如何解决这个问题的想法，请告诉我们。

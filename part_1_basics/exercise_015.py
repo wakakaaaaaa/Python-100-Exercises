@@ -1,21 +1,24 @@
 """
-### 15. 列表切片
+题目 015: 使用函数式API处理列表
 
-- **描述:** 给定一个列表 `numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`，提取索引从 2 到 6（不包含 6）的元素。
-- **提示:** 使用列表切片 `numbers[start:end]`。
-- **期待:** `print(sub_list)` 输出 `[2, 3, 4, 5]`。
+要求:
+1. 编写一个名为 `square_list(numbers)` 的函数，使用 `map` 和一个 `lambda` 函数，返回一个新列表，其中每个数字都是原列表数字的平方。
+2. 编写一个名为 `filter_odd_numbers(numbers)` 的函数，使用 `filter` 和一个 `lambda` 函数，返回一个只包含奇数的新列表。
+3. 编写一个名为 `sum_with_reduce(numbers)` 的函数，使用 `functools.reduce` 和一个 `lambda` 函数，计算列表中所有数字的和。
+
+提示:
+对于第3点，你可能需要 `from functools import reduce`。
 """
+from functools import reduce
 
-def get_list_slice(numbers):
-    """
-    获取列表从索引 2 到 6 (不含) 的切片
-    :param numbers: 输入列表
-    :return: 子列表
-    """
+def square_list(numbers):
     # 在这里写下你的代码
     pass
 
-if __name__ == '__main__':
-    num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    sub = get_list_slice(num_list)
-    print(f"从 {num_list} 中切片的结果是: {sub}") 
+def filter_odd_numbers(numbers):
+    # 在这里写下你的代码
+    pass
+
+def sum_with_reduce(numbers):
+    # 在这里写下你的代码
+    pass

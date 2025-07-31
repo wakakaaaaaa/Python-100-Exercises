@@ -1,9 +1,18 @@
-from part_2_control_flow.exercise_035 import count_vowels
+import pytest
+from part_2_control_flow.exercise_035 import BankAccount
 
-def test_count_vowels():
-    """测试元音字母计数"""
-    assert count_vowels("Hello Python") == 3 # e, o, o
-    assert count_vowels("AEIOU aeiou") == 10
-    assert count_vowels("Rhythm") == 0
-    assert count_vowels("") == 0
-    assert count_vowels("This is a test sentence.") == 7 
+def test_withdraw_insufficient_funds():
+    acc = BankAccount(100)
+    with pytest.raises(ValueError, match="Insufficient funds"):
+        acc.withdraw(150)
+
+def test_withdraw_sufficient_funds():
+    acc = BankAccount(100)
+    acc.withdraw(50)
+    assert acc.get_balance() == 50
+
+def test_balance_unchanged_after_failed_withdraw():
+    acc = BankAccount(100)
+    with pytest.raises(ValueError):
+        acc.withdraw(150)
+    assert acc.get_balance() == 100

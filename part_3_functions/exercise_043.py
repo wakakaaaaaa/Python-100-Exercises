@@ -1,23 +1,16 @@
 """
-### 43. 默认参数
+题目 043: 解析JSON数据
 
-- **描述:** 修改第 41 题的 `greet` 函数，让它在没有提供名字时，默认问候 "World"。
-- **提示:** 在函数定义中给参数赋一个默认值 `def greet(name="World"):`。
-- **期待:**
-  - `greet("Bob")` 输出 `Hello, Bob!`
-  - `greet()` 输出 `Hello, World!`
+要求:
+编写一个名为 `get_user_name_from_api` 的函数，它接受一个 `user_id`。
+函数需要构造URL `https://api.example.com/users/{user_id}`，获取JSON数据，
+并返回其中 `"name"` 键对应的值。
+
+提示:
+我们的测试会模拟对这个URL的请求。你需要关注的是如何正确地构造URL和从返回的字典中提取数据。
 """
+import requests
 
-# 我们将重新定义这个函数，而不是修改之前的文件
-def greet_with_default():
-    """
-    生成一个问候字符串，name 参数有默认值。
-    :param name: 要问候的人的名字，默认为 "World"
-    :return: 问候语字符串
-    """
+def get_user_name_from_api(user_id):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    print(greet_with_default("Bob"))
-    print(greet_with_default()) 

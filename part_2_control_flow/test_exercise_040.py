@@ -1,21 +1,11 @@
-from part_2_control_flow.exercise_040 import reverse_string
+import pytest
+from part_2_control_flow.exercise_040 import find_second_largest
 
-def test_reverse_string_basic():
-    """测试基本字符串反转"""
-    assert reverse_string("python") == "nohtyp"
-
-def test_reverse_string_palindrome():
-    """测试回文字符串"""
-    assert reverse_string("madam") == "madam"
-
-def test_reverse_string_with_space():
-    """测试带空格的字符串"""
-    assert reverse_string("hello world") == "dlrow olleh"
-
-def test_reverse_string_empty():
-    """测试空字符串"""
-    assert reverse_string("") == ""
-
-def test_reverse_string_single_char():
-    """测试单字符字符串"""
-    assert reverse_string("a") == "a" 
+def test_find_second_largest():
+    assert find_second_largest([1, 2, 3, 4, 5]) == 4
+    assert find_second_largest([10, 20, 5, 15]) == 15
+    assert find_second_largest([-1, -5, -2, -10]) == -2
+    assert find_second_largest([5, 5, 5, 5]) == None
+    assert find_second_largest([10]) == None
+    assert find_second_largest([]) == None
+    assert find_second_largest([1, 1, 2, 2]) == 1

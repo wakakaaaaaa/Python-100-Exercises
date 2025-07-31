@@ -1,22 +1,13 @@
 """
-### 18. 字典修改
+题目 018: 找出列表中的最小数
 
-- **描述:** 在第 17 题创建的学生字典中，将学生的成绩修改为 95，并添加一个新的键值对表示他的城市 "city": "Beijing"。
-- **提示:** 通过键直接赋值可以修改现有值 `student['score'] = 95` 或添加新值 `student['city'] = 'Beijing'`。
-- **期待:** 修改后的字典为 `{'name': 'Alice', 'age': 20, 'score': 95, 'city': 'Beijing'}`。
+要求:
+编写一个名为 `find_min` 的函数，它接受一个数字列表 `numbers` 作为参数，并返回列表中的最小值。
+
+提示:
+Python有一个内置函数 `min()` 可以找到列表中的最小值。
 """
 
-def modify_student_info(student):
-    """
-    修改学生字典：更新成绩，添加城市
-    :param student: 学生信息字典
-    :return: 修改后的字典
-    """
+def find_min(numbers):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    student_info = {'name': 'Alice', 'age': 20, 'score': 90}
-    print(f"原始字典: {student_info}")
-    modified_info = modify_student_info(student_info)
-    print(f"修改后字典: {modified_info}") 

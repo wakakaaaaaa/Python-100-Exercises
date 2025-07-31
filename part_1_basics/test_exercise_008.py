@@ -1,6 +1,8 @@
-from part_1_basics.exercise_008 import create_intro_string
+import pytest
+from part_1_basics.exercise_008 import find_max
 
-def test_create_intro_string():
-    """测试f-string格式化功能"""
-    assert create_intro_string("Bob", 25) == "Bob is 25 years old."
-    assert create_intro_string("Alice", 30) == "Alice is 30 years old." 
+def test_find_max():
+    assert find_max(1, 5) == 5
+    assert find_max(-1, -5) == -1
+    assert find_max(0, 0) == 0
+    assert find_max(10, 10) == 10

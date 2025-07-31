@@ -1,20 +1,22 @@
-from part_2_control_flow.exercise_034 import simple_login
+import pytest
+from part_2_control_flow.exercise_034 import BankAccount
 
-CORRECT_USER = "admin"
-CORRECT_PASS = "password123"
+def test_bank_account_initialization():
+    acc = BankAccount(initial_balance=100)
+    assert acc.get_balance() == 100
 
-def test_login_success():
-    """测试成功登录"""
-    assert simple_login(CORRECT_USER, CORRECT_PASS, "admin", "password123") == "登录成功！"
+def test_bank_account_deposit():
+    acc = BankAccount(100)
+    acc.deposit(50)
+    assert acc.get_balance() == 150
 
-def test_login_wrong_username():
-    """测试用户名错误"""
-    assert simple_login(CORRECT_USER, CORRECT_PASS, "user", "password123") == "用户名或密码错误！"
+def test_bank_account_withdraw():
+    acc = BankAccount(100)
+    acc.withdraw(30)
+    assert acc.get_balance() == 70
 
-def test_login_wrong_password():
-    """测试密码错误"""
-    assert simple_login(CORRECT_USER, CORRECT_PASS, "admin", "wrongpass") == "用户名或密码错误！"
-
-def test_login_wrong_both():
-    """测试用户名和密码都错误"""
-    assert simple_login(CORRECT_USER, CORRECT_PASS, "user", "wrongpass") == "用户名或密码错误！"
+def test_bank_account_multiple_operations():
+    acc = BankAccount(200)
+    acc.deposit(50)
+    acc.withdraw(100)
+    assert acc.get_balance() == 150

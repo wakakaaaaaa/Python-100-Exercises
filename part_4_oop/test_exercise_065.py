@@ -1,16 +1,22 @@
-from part_4_oop.exercise_065 import Car, ElectricCar
+import pytest
+from fastapi.testclient import TestClient
+from part_4_oop.main import app, get_db
+from part_4_oop.database import SessionLocal, engine, Base
 
-def test_electric_car_creation_with_super():
-    """测试使用 super() 的 ElectricCar 实例创建和所有属性。"""
-    my_porsche = ElectricCar("Porsche", "Taycan", "93.4kWh")
-    
-    # 测试实例类型
-    assert isinstance(my_porsche, ElectricCar)
-    assert isinstance(my_porsche, Car)
-    
-    # 测试继承的属性
-    assert my_porsche.brand == "Porsche"
-    assert my_porsche.model == "Taycan"
-    
-    # 测试自己的属性
-    assert my_porsche.battery_size == "93.4kWh" 
+@pytest.fixture(scope="module")
+def test_db():
+    Base.metadata.create_all(bind=engine)
+    db = SessionLocal()
+    yield db
+    Base.metadata.drop_all(bind=engine)
+
+app.dependency_overrides[get_db] = test_db
+
+client = TestClient(app)
+
+def test_create_todo_db():
+    response = client.post("/todos", json={"title": "Test DB Create", "completed": False})
+    assert response.status_code == 201
+    data = response.json()
+    assert data["title"] == "Test DB Create"
+    assert "id" in data

@@ -1,22 +1,16 @@
 """
-### 42. 带返回值的函数
+题目 042: 处理网络请求错误
 
-- **描述:** 编写一个名为 `add` 的函数，它接受两个数字作为参数，并返回它们的和。
-- **提示:** 使用 `return` 语句来返回结果。
-- **期待:** `result = add(5, 3)` 后，`print(result)` 输出 `8`。
+要求:
+编写一个名为 `safe_get_request` 的函数，它接受一个 `url`。
+函数应能处理 `requests` 在请求过程中可能抛出的任何异常（如网络问题、无效URL等）。
+如果请求成功，则返回响应对象；如果发生任何与请求相关的错误，则返回 `None`。
+
+提示:
+使用 `try...except requests.exceptions.RequestException:` 块来捕获所有 `requests` 可能的异常。
 """
+import requests
 
-def add(a, b):
-    """
-    返回两个数字的和。
-    :param a: 第一个数字
-    :param b: 第二个数字
-    :return: a 和 b 的和
-    """
+def safe_get_request(url):
     # 在这里写下你的代码
     pass
-
-if __name__ == '__main__':
-    num1, num2 = 5, 3
-    sum_result = add(num1, num2)
-    print(f"{num1} + {num2} = {sum_result}") 

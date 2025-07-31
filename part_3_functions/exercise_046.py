@@ -1,27 +1,26 @@
 """
-### 46. 可变参数 `**kwargs`
+题目 046: 编写一个简单的日志记录装饰器
 
-- **描述:** 编写一个函数 `display_info`，它可以接受任意数量的关键字参数，并将它们作为键值对打印出来。
-- **提示:** 使用 `**kwargs` 来接收一个包含所有关键字参数的字典。
-- **期待:** 调用 `display_info(name="Alice", age=25)` 会输出:
-  ```
-  name: Alice
-  age: 25
-  ```
+要求:
+编写一个名为 `log_call` 的装饰器。
+当它被应用到一个函数上时，在函数执行前打印 `Calling function '[function_name]'...`，
+在函数执行后打印 `Function '[function_name]' finished.`。
+装饰器必须能正确处理原函数的参数和返回值。
+
+提示:
+你需要使用 `functools.wraps` 来保持原函数的信息。
+装饰器内部的包装函数需要能接受 `*args` 和 `**kwargs`。
 """
+import functools
 
-def display_info(**kwargs):
-    """
-    接受任意数量的关键字参数，并返回一个格式化的、包含所有键值对的字符串。
-    每个键值对占一行，格式为 "key: value"。
-    
-    :param kwargs: 任意数量的关键字参数
-    :return: 一个多行字符串，描述所有传入的参数
-    """
-    # 在这里写下你的代码
-    pass
+def log_call(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        # 在这里写下你的代码
+        pass
+    return wrapper
 
-
-if __name__ == '__main__':
-    info = display_info(name="Alice", age=25, city="New York")
-    print(info)
+# 这是一个带参数的示例函数，你可以用它来测试你的装饰器
+@log_call
+def add(a, b):
+    return a + b

@@ -1,17 +1,8 @@
-from part_3_functions.exercise_050 import square_list_with_map
+import pytest
+from part_3_functions.exercise_050 import find_all_numbers
 
-def test_positive_numbers():
-    """测试正数列表"""
-    assert square_list_with_map([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25]
-
-def test_empty_list():
-    """测试空列表"""
-    assert square_list_with_map([]) == []
-
-def test_mixed_numbers():
-    """测试混合数列表"""
-    assert square_list_with_map([-1, -2, 0, 3]) == [1, 4, 0, 9]
-    
-def test_floats():
-    """测试浮点数列表"""
-    assert square_list_with_map([1.5, 2.0]) == [2.25, 4.0] 
+def test_find_all_numbers():
+    assert find_all_numbers("There are 3 apples and 10 bananas.") == ["3", "10"]
+    assert find_all_numbers("The price is $19.99") == ["19", "99"]
+    assert find_all_numbers("No numbers here.") == []
+    assert find_all_numbers("123 456") == ["123", "456"]
