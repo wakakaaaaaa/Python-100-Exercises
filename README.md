@@ -4,7 +4,7 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/bosens-China/Python-100-Exercises) ![GitHub forks](https://img.shields.io/github/forks/bosens-China/Python-100-Exercises) ![GitHub stars](https://img.shields.io/github/stars/bosens-China/Python-100-Exercises)
 
-这个项目的诞生是因为自己想要转行 AI 方向，此外女朋友对 Python 也有很浓厚的兴趣，但是都说实战是最好的老师，所以就有了这个仓库可以在学习一阶段后通过题目来去对照 APi 和知识点进行复习和练习。
+这个项目的诞生是因为自己想要转行 AI 方向，此外大漂亮女朋友对 Python 也有很浓厚的兴趣，但是都说实战是最好的老师，所以就有了这个仓库可以在学习一阶段后通过题目来去对照 APi 和知识点进行复习和练习。
 
 这个仓库包含了 100 道题目，全部都有相关的测试用例，此外还包含了一些最佳工程实践。
 
