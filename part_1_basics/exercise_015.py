@@ -13,12 +13,22 @@ from functools import reduce
 
 def square_list(numbers):
     # 在这里写下你的代码
+    new_list = list(map(lambda x: x*x, numbers))
     pass
+    return new_list
 
 def filter_odd_numbers(numbers):
     # 在这里写下你的代码
+    filtered_list = list(filter(lambda x : x % 2 != 0,numbers))
     pass
+    return filtered_list
 
 def sum_with_reduce(numbers):
     # 在这里写下你的代码
+    reduced_list = reduce(lambda a,b :a + b,numbers,0)#这个需要有一个最初的值，要不然当可迭代对象为空时会出现报错的
     pass
+    return reduced_list
+
+print(square_list([1,2,3,4]))
+print(filter_odd_numbers([1,2,3,4]))
+print(sum_with_reduce([1,2,3,4]))

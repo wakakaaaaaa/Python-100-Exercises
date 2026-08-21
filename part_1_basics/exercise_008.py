@@ -10,4 +10,10 @@
 
 def find_max(a, b):
     # 在这里写下你的代码
+    if a >= b:
+        return a
+    else:
+        return b
     pass
+
+print(find_max(56,2))

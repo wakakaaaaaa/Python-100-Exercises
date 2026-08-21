@@ -10,4 +10,8 @@
 
 def to_uppercase(s):
     # 在这里写下你的代码
+    new_s = s.upper()
     pass
+    return new_s
+
+print(to_uppercase('i got the job'))

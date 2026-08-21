@@ -10,4 +10,8 @@
 
 def hello_world():
     # 在这里写下你的代码
+    return 'Hello, World!'
     pass
+
+
+print(hello_world())

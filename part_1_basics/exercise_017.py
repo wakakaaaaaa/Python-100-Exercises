@@ -10,4 +10,8 @@
 
 def reverse_string(s):
     # 在这里写下你的代码
+    reverse_s = s[::-1]
     pass
+    return reverse_s
+
+print(reverse_string('abc'))

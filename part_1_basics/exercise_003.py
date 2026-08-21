@@ -10,4 +10,8 @@
 
 def join_strings(s1, s2):
     # 在这里写下你的代码
+    join_string = s1 +s2
     pass
+    return join_string
+
+print(join_strings('abc','defg'))

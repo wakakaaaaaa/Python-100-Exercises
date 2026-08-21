@@ -10,4 +10,8 @@
 
 def get_value(d, key):
     # 在这里写下你的代码
+    value = d[key]
     pass
+    return value
+
+print(get_value({1:'zhiru',2:'zhangrui'},1))

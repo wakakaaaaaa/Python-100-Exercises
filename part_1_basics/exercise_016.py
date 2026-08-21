@@ -10,4 +10,12 @@
 
 def contains_substring(s, sub):
     # 在这里写下你的代码
+    if sub in s:
+        return True
+    else:
+        return False
     pass
+
+print(contains_substring('abc','ab'))
+print(contains_substring('abcd','ac'))
+print(contains_substring('abcd',''))
