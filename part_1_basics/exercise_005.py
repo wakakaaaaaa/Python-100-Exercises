@@ -10,4 +10,10 @@
 
 def is_even(n):
     # 在这里写下你的代码
+    if n % 2 == 0:
+        return True
+    else:
+        return False
     pass
+
+print(is_even(6))

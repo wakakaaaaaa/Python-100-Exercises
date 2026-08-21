@@ -10,4 +10,8 @@
 
 def get_first_element(items):
     # 在这里写下你的代码
+    first_item = items[0]
     pass
+    return first_item
+
+print(get_first_element([1,2,3,4,5,6]))

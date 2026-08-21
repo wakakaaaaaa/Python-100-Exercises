@@ -10,4 +10,8 @@ Python有一个内置函数 `len()` 可以直接完成这个任务。
 
 def list_length(items):
     # 在这里写下你的代码
+    len_list = len(items)
     pass
+    return len_list
+
+print(list_length([1,2,3,4,5,6]))

@@ -10,4 +10,8 @@
 
 def rectangle_area(width, height):
     # 在这里写下你的代码
+    area = width * height
     pass
+    return area
+
+print(rectangle_area(1,2))

@@ -10,4 +10,11 @@
 
 def key_exists(d, key):
     # 在这里写下你的代码
+    print(type(d.keys()))
+    if key in d.keys():
+        return True
+    else:
+        return False
     pass
+
+print(key_exists({1:'zhiru',2:'zhangrui'},3))

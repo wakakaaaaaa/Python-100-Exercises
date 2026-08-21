@@ -10,4 +10,7 @@
 
 def add(a, b):
     # 在这里写下你的代码
+    sum = a + b
     pass
+    return sum
+print(add(1,1))

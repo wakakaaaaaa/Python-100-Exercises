@@ -10,4 +10,10 @@
 
 def create_dictionary(keys, values):
     # 在这里写下你的代码
+    new_dict = dict(zip(keys,values))
     pass
+    return new_dict
+
+print(create_dictionary([1,2,3],['zhiru','zhangrui','xiaoming']))
+print(create_dictionary([1,2],['zhiru','zhangrui','xiaoming']))
+print(create_dictionary([1,2,3],['zhiru','zhangrui']))

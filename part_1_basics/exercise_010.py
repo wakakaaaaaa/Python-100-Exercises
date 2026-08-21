@@ -10,4 +10,11 @@
 
 def is_list_empty(items):
     # 在这里写下你的代码
+    list_len = len(items)
+    if list_len == 0:
+        return True
+    else:
+        return False
     pass
+
+print(is_list_empty([1,2,3]))

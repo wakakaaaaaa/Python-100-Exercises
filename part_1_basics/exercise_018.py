@@ -10,4 +10,8 @@ Python有一个内置函数 `min()` 可以找到列表中的最小值。
 
 def find_min(numbers):
     # 在这里写下你的代码
+    min_num = min(numbers)
     pass
+    return min_num
+
+print(find_min([1,2,3,4,5,6]))

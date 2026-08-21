@@ -10,4 +10,8 @@
 
 def minutes_to_seconds(minutes):
     # 在这里写下你的代码
+    get_seconds = minutes * 60
     pass
+    return get_seconds
+
+print(minutes_to_seconds(6))

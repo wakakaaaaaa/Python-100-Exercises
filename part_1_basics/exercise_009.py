@@ -10,4 +10,8 @@
 
 def repeat_string(s, n):
     # 在这里写下你的代码
+    new_string = s * n
     pass
+    return new_string
+
+print(repeat_string('a',6))
