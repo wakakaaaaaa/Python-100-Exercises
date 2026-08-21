@@ -74,3 +74,4 @@ uv run pytest part_1_basics/test_exercise_005.py
 
 - 提交答案: 完成题目后，欢迎通过 [答案提交 Issue](https://github.com/bosens-China/Python-100-Exercises/issues/new?assignees=&labels=答案,待审核&template=answer_submission.yml&title=[答案提交]+题目+) 分享你的解法。
 - 反馈与建议: 如有任何问题或建议，请通过 [意见反馈 Issue](https://github.com/bosens-China/Python-100-Exercises/issues/new?assignees=&labels=反馈,建议&template=feedback.yml&title=[反馈/建议]+) 进行反馈。
+- 补交2026.8.21误删的commit
