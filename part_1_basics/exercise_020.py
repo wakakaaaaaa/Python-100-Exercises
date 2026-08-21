@@ -21,3 +21,5 @@ print(are_all_unique([1,2,3]))
 print(are_all_unique([1,2,3,5]))
 print(are_all_unique([1,2,3,1]))
 print(are_all_unique([1,2,3,'1']))
+print(are_all_unique([]))
+
