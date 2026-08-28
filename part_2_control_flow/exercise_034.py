@@ -14,4 +14,16 @@
 
 class BankAccount:
     # 在这里写下你的代码
+    def __init__(self,initial_balance):
+        self.initial_balance = initial_balance
+
+    def get_balance(self):
+        return self.initial_balance
+
+    def deposit(self,amount):
+        self.initial_balance += amount
+
+    def withdraw(self,amount):
+        self.initial_balance -= amount
+
     pass

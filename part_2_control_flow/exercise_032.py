@@ -8,4 +8,7 @@
 
 class Person:
     # 在这里写下你的代码
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
     pass

@@ -12,4 +12,6 @@
 
 def remove_duplicates(items):
     # 在这里写下你的代码
+    items0 = list(set(items))
     pass
+    return items0

@@ -12,4 +12,12 @@
 
 def count_vowels(s):
     # 在这里写下你的代码
+    s1 = s.lower()
+    vowels = ['a','e','i','o','u']
+    sum = 0
+    for i in s1:
+        if i in vowels:
+            sum += 1
+
+    return sum
     pass

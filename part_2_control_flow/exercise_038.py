@@ -12,4 +12,8 @@
 
 def count_lines(filepath):
     # 在这里写下你的代码
+    with open(filepath,'r') as f:
+        num = len(f.readlines())
+
+    return num
     pass

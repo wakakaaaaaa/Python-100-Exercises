@@ -12,4 +12,6 @@
 
 def write_to_file(filepath, content):
     # 在这里写下你的代码
+    with open(filepath,'w') as f:
+        f.write(content)
     pass

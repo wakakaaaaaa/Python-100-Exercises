@@ -12,4 +12,14 @@
 
 def factorial(n):
     # 在这里写下你的代码
+    fac  = 1
+    if n == 0:
+        return 1
+    else:
+        for i in range(n + 1):
+            if i == 0 :
+                continue
+            fac = fac * i
+
+    return fac
     pass

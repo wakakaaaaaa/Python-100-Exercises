@@ -12,4 +12,11 @@
 
 def flatten_list(nested_list):
     # 在这里写下你的代码
+    list0 = []
+    for i in range(len(nested_list)):
+        for j in range(len(nested_list[i])):
+            list0.append(nested_list[i][j])
+    return list0
+
+
     pass

@@ -13,4 +13,11 @@
 
 def get_even_numbers(numbers):
     # 在这里写下你的代码
+    # list0 = []
+    # for i in range(len(numbers)):
+    #     if numbers[i] % 2 == 0:
+    #         list0.append(numbers[i])
+
+    list1 = [x for x in numbers if x % 2 == 0]
+    return list1
     pass

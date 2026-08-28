@@ -12,4 +12,15 @@
 
 def word_count(sentence):
     # 在这里写下你的代码
+    sentence0 = sentence.lower()
+    sentence1 = sentence0.split(' ')
+    dic = {}
+    for i in sentence1:
+        if i not in dic:
+            dic[i] = 0
+        dic[i] += 1
+
+    return dic
     pass
+
+print(word_count('i am wonderful'))

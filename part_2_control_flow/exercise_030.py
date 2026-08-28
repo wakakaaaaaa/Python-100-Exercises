@@ -12,4 +12,8 @@
 
 def get_keys(d):
     # 在这里写下你的代码
+    print(type(d.keys()))
+    list1 = list(d.keys())
     pass
+    return list1
+

@@ -17,4 +17,19 @@ class Shape:
 
 class Rectangle(Shape):
     # 在这里写下你的代码
+
+
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+
+
+
+    def area(self):
+        area0 = self.width*self.height
+        return area0
     pass
+
+r = Rectangle(1,1)
+print(r.area())

@@ -14,4 +14,17 @@
 
 def fizzbuzz(n):
     # 在这里写下你的代码
+    list0 = []
+    for i in range (n):
+        arg = i + 1
+        if (arg % 3 == 0) and (arg % 5 == 0):
+            list0.append("FizzBuzz")
+        elif arg % 3 == 0:
+            list0.append("Fizz")
+        elif arg % 5 ==0:
+            list0.append("Buzz")
+        else:
+            list0.append(arg)
     pass
+    return list0
+

@@ -11,6 +11,8 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-
+    def introduce(self):
+        introduce0 = f"Hi, my name is {self.name} and I am {self.age} years old."
+        return introduce0
     # 在这里写下你的代码
     pass

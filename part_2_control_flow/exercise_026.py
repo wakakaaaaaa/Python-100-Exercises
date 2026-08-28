@@ -12,4 +12,8 @@
 
 def find_index(items, element):
     # 在这里写下你的代码
+    for i in range(len(items)):
+        if element == items[i]:
+            return i
+    return -1
     pass
