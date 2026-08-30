@@ -20,3 +20,6 @@ def is_palindrome(s):
         return False
 
     pass
+
+print(is_palindrome("ssd"))
+print(is_palindrome("ssdss"))
