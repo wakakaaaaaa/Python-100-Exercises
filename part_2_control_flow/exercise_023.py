@@ -20,6 +20,5 @@ def is_palindrome(s):
 
     pass
 
-print(is_palindrome("ssd"))
 print(is_palindrome("ssdss"))
-print(is_palindrome("ssdss2"))
+print(is_palindrome("ssds"))
