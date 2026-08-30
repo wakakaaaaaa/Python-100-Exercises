@@ -22,4 +22,4 @@ def is_palindrome(s):
 
 print(is_palindrome("ssd"))
 print(is_palindrome("ssdss"))
-print(is_palindrome("ssdss1"))
+print(is_palindrome("ssdss2"))
