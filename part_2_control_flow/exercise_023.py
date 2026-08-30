@@ -11,7 +11,7 @@
 """
 
 def is_palindrome(s):
-    # 在这里写下你的代码
+    # 在这里写下你的代码1
     s1 = s.lower()
     s2 = s[::-1]
     if s2 == s1 :
