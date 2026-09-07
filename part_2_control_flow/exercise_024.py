@@ -12,4 +12,10 @@
 
 def factorial(n):
     # 在这里写下你的代码
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
     pass
+
+print(factorial(0))

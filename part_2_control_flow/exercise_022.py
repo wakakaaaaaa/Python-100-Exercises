@@ -12,4 +12,12 @@
 
 def count_vowels(s):
     # 在这里写下你的代码
+    s = s.lower()
+    count  = 0
+    for i in s:
+        if i in 'aeiou':
+            count +=1
     pass
+    return count
+
+print(count_vowels("Hello, World!"))

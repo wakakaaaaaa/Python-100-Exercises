@@ -12,4 +12,7 @@
 
 def is_palindrome(s):
     # 在这里写下你的代码
+    return s == s[::-1]
     pass
+
+print(is_palindrome("racecar"))

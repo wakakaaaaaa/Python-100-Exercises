@@ -12,4 +12,9 @@
 
 def find_index(items, element):
     # 在这里写下你的代码
-    pass
+    for i ,items in enumerate(items, 0):
+        if element == items:
+            return i
+
+    return -1
+print(find_index(['apple', 'banana', 'cherry'], "cherry1"))

@@ -13,4 +13,8 @@
 
 def get_even_numbers(numbers):
     # 在这里写下你的代码
+    # list(x for x in numbers if x %2 == 0)
+
+    return [x for x in numbers if x %2 == 0]
     pass
+print(get_even_numbers([1,3,2,4,6,"a"]))

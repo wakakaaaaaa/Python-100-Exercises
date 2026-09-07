@@ -12,4 +12,6 @@
 
 def merge_dictionaries(d1, d2):
     # 在这里写下你的代码
-    pass
+    return {**d1, **d2}
+
+print(merge_dictionaries({'a': 1, 'b': 2}, {'b': 3, 'c': 4}))

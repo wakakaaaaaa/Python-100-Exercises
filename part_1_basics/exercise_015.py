@@ -15,6 +15,9 @@ def square_list(numbers):
     # 在这里写下你的代码
     new_list = list(map(lambda x: x*x, numbers))
     pass
+
+    #如果不用map和list可以用 Pythonic 的写法（列表推导式）执行速度通常更快，代码可读性也更好
+    new_list = [x * x for x in numbers]
     return new_list
 
 def filter_odd_numbers(numbers):

@@ -12,4 +12,14 @@
 
 def word_count(sentence):
     # 在这里写下你的代码
-    pass
+    sentence = sentence.lower()
+    words = sentence.split()
+    word_dict = {}
+    for word in words:
+        if word in word_dict:
+            word_dict[word] += 1
+        else:
+            word_dict[word] = 1
+    return word_dict
+
+print(word_count("I love Python Python is my favorite programming language"))

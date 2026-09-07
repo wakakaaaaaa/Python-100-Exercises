@@ -12,4 +12,10 @@
 
 def remove_duplicates(items):
     # 在这里写下你的代码
-    pass
+    new_list = []
+    for item in items:
+        if item in new_list:
+            continue
+        new_list.append(item)
+    return new_list
+print(remove_duplicates([1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 9, 9, 10]))
