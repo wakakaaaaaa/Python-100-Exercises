@@ -12,4 +12,7 @@
 
 def get_keys(d):
     # 在这里写下你的代码
+    return list(d.keys())
     pass
+
+print(get_keys({"a": 1, "b": 2, "c": 3}))

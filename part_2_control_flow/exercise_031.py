@@ -11,10 +11,24 @@
 子类通过在类定义时括号内放入父类名来实现继承，例如 `class Child(Parent):`。
 """
 
+
 class Shape:
     def area(self):
         return 0
 
+
 class Rectangle(Shape):
     # 在这里写下你的代码
-    pass
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+# 使用@property装饰器将area方法转换为属性
+    @property
+    def area(self):
+    # 计算并返回矩形的面积
+    # 通过将矩形的宽度(self.width)和高度(self.height)相乘得到
+        return self.width * self.height
+
+
+print("面积：", Rectangle(3, 4).area)

@@ -12,7 +12,7 @@
 
 def word_count(sentence):
     # 在这里写下你的代码
-    sentence = sentence.lower()
+    sentence = sentence.replace(",","").replace(".","").lower()
     words = sentence.split()
     word_dict = {}
     for word in words:
@@ -22,4 +22,4 @@ def word_count(sentence):
             word_dict[word] = 1
     return word_dict
 
-print(word_count("I love Python Python is my favorite programming language"))
+print(word_count("I love Python, Python is my favorite programming language"))

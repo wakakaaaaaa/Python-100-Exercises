@@ -7,10 +7,15 @@
 格式为 `"Hi, my name is [name] and I am [age] years old."`。
 """
 
+
 class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
     # 在这里写下你的代码
-    pass
+    def introduce(self):
+        print("Hi, my name is " + self.name + " and I am " + str(self.age) + " years old.")
+
+
+Person("Tom", 18).introduce()
