@@ -12,4 +12,6 @@
 
 def merge_dictionaries(d1, d2):
     # 在这里写下你的代码
+    # return {**d1,**d2}
+    return d1 | d2
     pass

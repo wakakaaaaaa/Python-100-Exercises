@@ -13,4 +13,15 @@
 
 def robust_read_file(filepath):
     # 在这里写下你的代码
+    try:
+        with open(filepath,'r') as f:
+            content1 = f.read()
+        return content1
+    except FileNotFoundError:
+        return None
+    finally:
+        print("File operation finished.")
+
+
+
     pass
