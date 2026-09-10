@@ -15,4 +15,5 @@ import requests
 
 def search_posts_by_user(user_id):
     # 在这里写下你的代码
+    return requests.get('https://api.example.com/posts',params={'userID':user_id}).json()
     pass

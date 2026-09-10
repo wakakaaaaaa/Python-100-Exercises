@@ -13,4 +13,8 @@ import requests
 
 def safe_get_request(url):
     # 在这里写下你的代码
+    try:
+        return requests.get(url)
+    except requests.exceptions.RequestException:
+        return None
     pass

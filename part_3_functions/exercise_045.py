@@ -15,4 +15,6 @@ import requests
 
 def create_post(title, body):
     # 在这里写下你的代码
+    url='https://api.example.com/posts'
+    return requests.post(url,json = {'title':title,'body':body}).json()
     pass

@@ -13,4 +13,8 @@ import requests
 
 def get_user_name_from_api(user_id):
     # 在这里写下你的代码
+    data = requests.get('https://api.example.com/users/{user_id}'.format(user_id=user_id))
+    username = data.json()['name']
+    return username
+
     pass

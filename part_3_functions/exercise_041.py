@@ -13,4 +13,5 @@ import requests
 
 def get_json_from_url(url):
     # 在这里写下你的代码
+    return requests.get(url).json()
     pass
