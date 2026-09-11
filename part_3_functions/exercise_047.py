@@ -12,4 +12,5 @@ from datetime import datetime
 
 def parse_date(date_string):
     # 在这里写下你的代码
+    return datetime.strptime(date_string,'%Y-%m-%d').date()
     pass

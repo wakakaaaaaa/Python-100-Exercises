@@ -17,6 +17,9 @@ def log_call(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         # 在这里写下你的代码
+        print(f"Calling function '{func.__name__}'...")
+        print(f"Function '{func.__name__}' finished.")
+        return func(*args,**kwargs)
         pass
     return wrapper
 
@@ -24,3 +27,7 @@ def log_call(func):
 @log_call
 def add(a, b):
     return a + b
+
+add(1,1)
+
+

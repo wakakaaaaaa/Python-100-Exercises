@@ -13,4 +13,5 @@ import os
 
 def join_path(part1, part2):
     # 在这里写下你的代码
+    return os.path.join(part1,part2)
     pass

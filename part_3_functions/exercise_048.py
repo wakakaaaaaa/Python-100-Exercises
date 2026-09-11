@@ -13,4 +13,6 @@ from datetime import date
 
 def days_between(d1, d2):
     # 在这里写下你的代码
+    delta = d1 - d2
+    return abs(delta.days)
     pass

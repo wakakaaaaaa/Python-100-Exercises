@@ -13,4 +13,7 @@ import re
 
 def find_all_numbers(s):
     # 在这里写下你的代码
+    pattern = r"\d"
+    text = s
+    return re.findall(pattern,text)
     pass
