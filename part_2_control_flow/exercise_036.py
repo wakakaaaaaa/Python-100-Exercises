@@ -13,4 +13,15 @@
 
 def robust_read_file(filepath):
     # 在这里写下你的代码
-    pass
+    try:
+        with open(filepath,'r',encoding='utf-8') as file:
+            return file.read()
+    except FileNotFoundError:
+        print("文件读取错误")
+        return None
+    finally:
+        print("File operation finished.")
+
+
+print(robust_read_file("test_file.txt"))
+print(robust_read_file("test_file1.txt"))

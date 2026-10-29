@@ -12,6 +12,24 @@
 `deposit` 会增加余额，`withdraw` 会减少余额。暂时不用考虑余额不足的情况。
 """
 
+
 class BankAccount:
     # 在这里写下你的代码
-    pass
+    def __init__(self, initial_balance):
+        self.initial_balance = initial_balance
+
+    def get_balance(self):
+        return self.initial_balance
+
+    def deposit(self, amount):
+        self.initial_balance += amount
+
+    def withdraw(self, amount):
+        self.initial_balance -= amount
+
+
+bk1 = BankAccount(50)
+bk1.withdraw(10)
+bk1.deposit(100000)
+print(bk1.get_balance())
+print(bk1.get_balance())
